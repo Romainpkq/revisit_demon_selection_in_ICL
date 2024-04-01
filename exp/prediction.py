@@ -33,14 +33,13 @@ test_split={
             "qnli": 'validation',
     }
 
-
-model_names = ['gpt2-xl', 'gpt-j-6b', 'Llama-2-7b-hf', 'Llama-2-13b-hf']
 model_names = ['Llama-2-7b-hf']
 
-dir1 = {result_path}
+# set the model and dataset path
+dir1 = ''
+dataset_path = ''
 
 task_names = ['subj']
-dataset_path = {dataset_dir}
 
 
 for model_name in model_names:
