@@ -124,15 +124,20 @@ if __name__ == '__main__':
     model_names = ['Llama-2-7b-hf']
     seeds = [1, 43, 666]
 
+    # set the model and dataset path
+    model_dir = ''
+    sentence_transformer_path = ''
+    data_dir = ''
+
     for model_name in model_names:
-        model_path = {model_dir} + model_name
-        sentence_model_path = {sentence_transformer_path}
+        model_path = model_dir + model_name
+        sentence_model_path = sentence_transformer_path
 
         for seed in seeds:
             for task_name in task_names:
-                train_path = {data_dir} + task_name + '/train.jsonl'
+                train_path = data_dir + task_name + '/train.jsonl'
                 test_name = test_split[task_name]
-                test_path = {data_dir} + task_name + '/' + test_name + '.jsonl'
+                test_path = data_dir + task_name + '/' + test_name + '.jsonl'
 
                 ice_num = 8
                 output_json_filepath = './results/' + model_name + '/' + task_name
