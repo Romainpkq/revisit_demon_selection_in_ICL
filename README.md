@@ -7,7 +7,9 @@ Note: OpenICL requires Python 3.8+
 
 **Installation for local development:**
 ```
-cd OpenICL-main
+git clone https://github.com/Romainpkq/revisit_demon_selection_in_ICL.git
+
+cd revisit_demon_selection_in_ICL
 pip install -e .
 ```
 
